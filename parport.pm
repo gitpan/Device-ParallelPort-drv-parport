@@ -19,7 +19,7 @@ Note that this is a temporary hack for now, full version to come soon...
 
 =head1 COPYRIGHT
 
-Copyright (c) 2002 Scott Penrose. All rights reserved.
+Copyright (c) 2002,2004 Scott Penrose. All rights reserved.
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
 
@@ -36,7 +36,7 @@ L<Device::ParallelPort>
 use Device::ParallelPort::drv;
 require DynaLoader;
 our @ISA = qw(Device::ParallelPort::drv DynaLoader);
-our $VERSION = '0.3';
+our $VERSION = '1.0';
 
 bootstrap Device::ParallelPort::drv::parport $VERSION;
 
@@ -52,16 +52,8 @@ sub INFO {
 sub init {
 	my ($this, $str, @params) = @_;
 
-	$this->{DATA}{DEVICE} = "/dev/parport" . $str;
-	#if (-f "/dev/parport" . $str) {
-	#	$this->{DATA}{DEVICE} = "/dev/parport" . $str;
-	#} elsif (-f "/dev/ppuser" . $str) {
-	#	# TODO - consider using sprintf for 00, 01 ...
-	#	$this->{DATA}{DEVICE} = "/dev/ppuser" . $str;
-	#} else {
-	#	croak "No device found /dev/parport*, /dev/ppuser*";
-	#}
-
+	$this->{DATA}{DEVICE} = "/dev/parport" . $this->address_to_num($str);
+	# XXX What happened to ppuser support ?
 	$this->{DATA}{BASE} = parport_opendev($this->{DATA}{DEVICE});
 	unless ($this->{DATA}{BASE} > 1) {
 		croak "Failed to load partport driver for " . $this->{DATA}{DEVICE};

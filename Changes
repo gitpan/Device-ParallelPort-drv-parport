@@ -8,3 +8,6 @@ Revision history for Perl extension Device::ParallelPort::drv::parport.
 
 0.03  Thu May  9 20:44:41 EST 2002
 	- Wrong type needs char not int
+
+0.04  Sat May 11 08:18:01 EST 2002
+	- Include Perl Dependencies

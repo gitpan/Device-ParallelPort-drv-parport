@@ -7,3 +7,4 @@ parport.h
 README
 LICENSE
 test.pl
+META.yml                                 Module meta-data (added by MakeMaker)
