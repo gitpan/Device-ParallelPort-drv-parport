@@ -1,0 +1,6 @@
+Revision history for Perl extension Device::ParallelPort::drv::parport.
+
+0.01  Fri May  3 09:50:32 2002
+	- original version; created by h2xs 1.21 with options
+		-n Device::ParallelPort::drv::parport parport.h
+

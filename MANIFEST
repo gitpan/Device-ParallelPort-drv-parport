@@ -1,0 +1,7 @@
+Changes
+Makefile.PL
+MANIFEST
+parport.pm
+parport.xs
+README
+test.pl
