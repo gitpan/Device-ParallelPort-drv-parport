@@ -17,12 +17,20 @@ user access to the sound card (eg: /dev/dsp)
 
 Note that this is a temporary hack for now, full version to come soon...
 
+=head1 AUTHOR
+
+Scott Penrose L<scottp@dd.com.au>, L<http://linux.dd.com.au/>
+
+=head1 SEE ALSO
+
+L<Device::ParallelPort>
+
 =cut
 
 use Device::ParallelPort::drv;
 require DynaLoader;
 our @ISA = qw(Device::ParallelPort::drv DynaLoader);
-our $VERSION = '0.1';
+our $VERSION = '0.2';
 
 bootstrap Device::ParallelPort::drv::parport $VERSION;
 

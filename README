@@ -1,16 +1,9 @@
-Device/ParallelPort/drv/parport version 0.01
-============================================
+Device/ParallelPort/drv/parport
+===============================
 
-The README is used to introduce the module and provide instructions on
-how to install the module, any machine dependencies it may have (for
-example C compilers and installed libraries) and any other information
-that should be provided before the module is installed.
-
-A README file is required for CPAN modules since CPAN extracts the
-README file from a module distribution so that people browsing the
-archive can use it get an idea of the modules uses. It is usually a
-good idea to provide version information here so that people can
-decide whether fixes for the module are worth downloading.
+This is a Device::ParallelPort driver that uses direct IO access on linux. It
+uses the linux parport driver and is definitely the prefered access method on
+linux. It also means that you do not require root access.
 
 INSTALLATION
 
@@ -25,11 +18,11 @@ DEPENDENCIES
 
 This module requires these other modules and libraries:
 
-  blah blah blah
+  Device::ParallelPort
 
 COPYRIGHT AND LICENCE
 
-Put the correct copyright and licence information here.
+Distributed under the Perl Artistic License
 
-Copyright (C) 2002 A. U. Thor blah blah blah
+Copyright (C) 2002 Scott Penrose - scottp@dd.com.au
 

@@ -3,5 +3,7 @@ Makefile.PL
 MANIFEST
 parport.pm
 parport.xs
+parport.h
 README
+LICENSE
 test.pl
