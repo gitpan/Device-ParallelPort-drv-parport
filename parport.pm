@@ -17,6 +17,12 @@ user access to the sound card (eg: /dev/dsp)
 
 Note that this is a temporary hack for now, full version to come soon...
 
+=head1 COPYRIGHT
+
+Copyright (c) 2002 Scott Penrose. All rights reserved.
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
 =head1 AUTHOR
 
 Scott Penrose L<scottp@dd.com.au>, L<http://linux.dd.com.au/>
@@ -30,7 +36,7 @@ L<Device::ParallelPort>
 use Device::ParallelPort::drv;
 require DynaLoader;
 our @ISA = qw(Device::ParallelPort::drv DynaLoader);
-our $VERSION = '0.2';
+our $VERSION = '0.3';
 
 bootstrap Device::ParallelPort::drv::parport $VERSION;
 

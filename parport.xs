@@ -42,7 +42,7 @@ parport_closedev(base)
 	CODE:
 		close(base);
 
-int
+char
 parport_rd_data(base)
 	int base
 	CODE:
@@ -56,13 +56,13 @@ parport_rd_data(base)
 void
 parport_wr_data(base, val)
 	int base
-	int val
+	char val
 	CODE:
 		unsigned char byte;
 		byte = val & 0xff;
 		ioctl(base, PPWDATA, &byte);
 
-int
+char
 parport_rd_ctrl(base)
 	int base
 	CODE:
@@ -75,13 +75,13 @@ parport_rd_ctrl(base)
 void
 parport_wr_ctrl(base, val)
 	int base
-	int val
+	char val
 	CODE:
 		unsigned char byte;
 		byte = val & 0xff;
 		ioctl(base, PPWCONTROL, &byte);
 
-int
+char
 parport_rd_status(base)
 	int base
 	CODE:
